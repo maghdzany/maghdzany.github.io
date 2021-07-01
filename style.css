@@ -1,0 +1,66 @@
+.body {
+  min-height: 3000rem;
+}
+section {
+  padding-top: 5rem;
+}
+.navbar-brand {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-image: url(img/cover.png);
+  background-size: cover;
+  text-align: center;
+}
+
+#berita {
+  /* padding-top: 2rem; */
+  background-color: #e2edff;
+}
+
+.carousel {
+  margin-bottom: 3rem;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.carousel::after {
+  content: "";
+  display: block;
+  height: 25%;
+  width: 100%;
+  background-image: linear-gradient(to top, #000000d2, rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+}
+
+#profil {
+  /* padding-top: 2rem; */
+  background-color: #e2edff;
+}
+
+#struktur {
+  padding-top: 2rem;
+  background-color: #e2edff;
+}
+
+#peta {
+  padding-top: 2rem;
+  background-color: #e2edff;
+}
+
+footer {
+  padding-bottom: 1rem;
+  background-color: #0d6efd;
+}
