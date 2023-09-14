@@ -7,6 +7,10 @@ module.exports = {
       padding: '16px',
     },
     extend: {
+      fontFamily: {
+        montserrat: ['montserrat', 'sans'], // Ganti "Nama Font" dengan nama font yang Anda pilih
+        poppins: ['poppins', 'sans'],
+      },
       colors: {
         bgdark: '#0b0e2f',
         bgbiru: '#64428e',
