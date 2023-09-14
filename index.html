@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <!-- Tambahkan link ke CDN Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <!-- My Css -->
+    <link rel="stylesheet" href="src/input.css">
+    <!-- Tailwind Css -->
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/66335ad124.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 font-sans no-scrollbar">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-bgdark scale-y-0 shadow-md opacity-0 p-2 fixed top-0 w-full transition-all duration-300 ease-in-out z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <!-- logo -->
+                <div class="flex items-center">
+                    <img src="dist/img/logocilik.png" alt="Logo" class="h-8 w-8">
+                </div>
+                <!-- nama -->
+                <span class="ml-2 text-xl font-bold text-primary">MAGHDZANY</span>
+                <!-- dark mode dan menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="pr-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-moon" style="color: white;"></i>
+                    </button>
+                    <button id="menuToggle" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars" style="color: white;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Dimming Overlay -->
+    <div id="sidebarDimming" class="opacity-100 hidden bg-black bg-opacity-50 fixed top-0 left-0 w-full h-full z-50 transition-opacity duration-300 ease-in-out"></div>
+
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="rounded-lg bg-gradient-to-br from-bgbiru to-bgdark dark:bg-gray-900 shadow-sm h-screen w-0 fixed top-0 right-0 overflow-y-auto transition-all duration-300 transform translate-x-full z-50">
+            <div class="p-4">
+                <!-- Close Button -->
+                <div class="text-right flex justify-between">
+                    <a href="#home">
+                        <button id="darkModeToggle" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                            <i class="fa-solid fa-house" style="color: white;"></i>
+                        </button>
+                    </a>
+                    <a href="#download">
+                        <button id="darkModeToggle" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                            <i class="fa-solid fa-download" style="color: white;"></i>
+                        </button>
+                    </a>
+                    <a href="#about">
+                        <button id="darkModeToggle" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                            <i class="fa-solid fa-user" style="color: white;"></i>
+                        </button>
+                    </a>
+                    <a href="dark">
+                        <button id="darkModeToggle" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                            <i class="fa-solid fa-moon" style="color: white;"></i>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button id="closeSidebar" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+                            <i class="fa-solid fa-circle-xmark" style="color: white;"></i>
+                        </button>
+                    </a>
+                </div>
+    
+                <!-- Logo in Sidebar -->
+                <div class="flex justify-center mt-12">
+                    <img src="dist/img/sandemo.png" alt="Logo" class="h-24 w-24">
+                </div>
+                <h1 class="text-3xl block font-poppins font-extrabold text-center text-primary">Maghdzany Fikri Burhanudin</h1>
+                
+<!-- Menu Items in Sidebar -->
+<div class="mt-6">
+    <a href="#home" class="mb-2 block">
+        <div class="flex items-center space-x-1">
+            <i class="fa-solid fa-house" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Home</span>
+        </div>
+    </a>
+    <a href="#about" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-address-card" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">About Me</span>
+        </div>
+    </a>
+    <a href="#skills" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-pen-ruler" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Skills</span>
+        </div>
+    </a>
+    <a href="#gallery" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-image" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Portfolio</span>
+        </div>
+    </a>
+    <a href="#review" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-comments" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Review</span>
+        </div>
+    </a>
+    <a href="#education" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-user-graduate" style="color: #ffffff;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Education</span>
+        </div>
+    </a>
+    <a href="#social" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-users" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Social Media</span>
+        </div>
+    </a>
+    <a href="#contact" class="mb-2 block">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-address-book" style="color: white;"></i>
+            <span class="ml-2 text-base text-primary font-bold">Contact</span>
+        </div>
+    </a>
+</div>
+            </div>
+    </div>
+
+    <!-- Sticky Footer -->
+
+    
+    <!-- Hero Section -->
+    <section id="home" class="bg-bgdark py-20">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap"> 
+                <!-- BAGIAN PERTAMA KIRI -->
+                <div class="w-full self-center px-4 md:w-full lg:w-1/2 xl:w-1/2 relative">
+                    <img src="dist/img/sandemo.png" alt="Sandhika Galih" class="max-w-full max-h-full right-0 ml-auto mb-5 absolute top-0 left-0 w-auto h-auto z-10">
+                
+                    <h1 class="text-base font-semibold text-biru md:text-xl relative z-20">Hello 👋, I'm <span class="mt-1 block text-4xl font-bold text-primary dark:text-primary lg:text-5xl">Maghdzany Fikri</span></h1>
+                    <h2 class="mb-5 text-lg font-medium text-biru lg:text-2xl relative z-20">3D Artist & <span class="text-primary dark:text-white">Environment Designer</span></h2>
+                    <p class="mb-10 font-medium leading-relaxed text-secondary relative z-20"> <span class="font-bold"> "Transforming <span class="text-biru"> Visions</span> into <span class="text-biru">3D Realities</span>:</span> <span class="block">Crafting Immersive Worlds, One Pixel at a Time"</span></p>
+                  
+                    <a href="#" class="rounded-full bg-gradient-to-t from-aksen1 to-aksen2 py-2 px-5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg relative z-20">Download CV</a>
+                </div>
+                
+                
+                <!-- BAGIAN KEDUA KANAN -->
+                <div id="about" class="w-full self-top px-4 pt-32 lg:py-0 md:w-full lg:w-1/2 xl:w-1/2 relative">
+                    <h4 class="mb-3 text-base font-bold uppercase text-biru">About Me</h4>
+                    <h2 class="mb-5 max-w-md text-3xl font-bold text-primary dark:text-white lg:text-4xl">I'm a 3D Artist based in Malang</h2>
+                    <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">I am a Junior 3D Artist and Environment Designer with a passion for crafting mesmerizing visual worlds. I am delighted to have the chance to share my work with you and explore the various projects I've been involved in</p>
+                </div>
+                <!-- ============================= -->
+              </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gradient-to-b from-bgdark to-bgbiru">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 text-center">
+                  <h4 class="mb-2 text-base text-biru uppercase font-bold">Skills</h4>
+                  <h2 class="mb-4 text-3xl font-bold text-primary dark:text-dark sm:text-4xl lg:text-5xl">Software that I use</h2>
+                  <p class="text-md text-base font-medium text-secondary md:text-lg">I use AutoCAD for 2D drawing, and I use SketchUp with the help of Enscape for architectural modeling and rendering quickly. Whereas I use Blender for modeling complex objects and complex environments</p>
+                </div>
+              </div>
+      
+              <div class="w-full px-4">
+                <div class="flex flex-wrap items-center justify-center">
+                  <a href="#" class="mx-4 max-w-[120px] py-4 opacity-100 lg:mx-6 xl:mx-8 hover:opacity-60 transition-opacity duration-300 ease-in-out">
+                    <img src="dist/img/softwarelogo/autocad.svg" alt="Autocad" />
+                  </a>
+                  <a href="#" class="mx-4 max-w-[120px] py-4 opacity-100 lg:mx-6 xl:mx-8 hover:opacity-60 transition-opacity duration-300 ease-in-out">
+                    <img src="dist/img/softwarelogo/blender.svg" alt="Blender" />
+                  </a>
+                  <a href="#" class="mx-4 max-w-[120px] py-4 opacity-100 lg:mx-6 xl:mx-8 hover:opacity-60 transition-opacity duration-300 ease-in-out">
+                    <img src="dist/img/softwarelogo/enscape.svg" alt="Enscape" />
+                  </a>
+                  <a href="#" class="mx-4 max-w-[120px] py-4 opacity-100 lg:mx-6 xl:mx-8 hover:opacity-60 transition-opacity duration-300 ease-in-out">
+                    <img src="dist/img/softwarelogo/sketchup.svg" alt="Sketchup" />
+                  </a>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-gradient-to-b from-bgbiru from-10% via-bgdark via-30% to-bgdark to-90% py-16">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-xl text-center py-16">
+                  <h4 class="mb-2 text-base font-bold text-biru uppercase">Portfolio</h4>
+                  <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">Project Gallery</h2>
+                  <p class="text-md text-base font-medium text-secondary md:text-lg">
+                    Welcome to my project gallery, where I showcase a selection of my work as a 3D artist and environment designer. Each project represents a journey of creativity and innovation, bringing imaginative worlds and concepts to life through the medium of 3D art.
+                  </p>
+                </div>
+                <!-- Gambar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section id="review" class="py-16 bg-bgdark">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-xl text-center">
+                  <h4 class="mb-2 text-base font-bold text-biru uppercase">review</h4>
+                  <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">What People Said</h2>
+                  <p class="text-md font-medium text-secondary md:text-lg">
+                    Theese are honest reviews from people who have used my services
+                  </p>
+                </div>
+                <div class="grid mb-8 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 gap-4">
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/raiden.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Raiden Shogun</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">The God of Eternity</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/furina.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Furina</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">The God of Justice</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/nahida.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Nahida</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">The God of Wisdom</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/ayaka.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Kamisato Ayaka</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">Shirasagi no Himegimi</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/nilou.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Nilou</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">Flower Dancer</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                    <figure class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-card1 to-card2 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                            <h3 class="text-lg font-semibold text-primary dark:text-white">Belum ada review</h3>
+                            <p class="my-4 text-textdark">"Ulasan yang jujur dan positif dari pelanggan yang sebenarnya akan lebih berharga daripada ulasan palsu dalam jangka panjang."</p>
+                        </blockquote>
+                        <figcaption class="flex items-center justify-center space-x-3">
+                            <img class="rounded-full w-9 h-9" src="dist/img/profile/keqing.webp" alt="profile picture">
+                            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                                <div><span class="text-primary">Keqing</span></div>
+                                <div class="text-sm text-biru dark:text-gray-400">Qixing</div>
+                            </div>
+                        </figcaption>    
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-bgdark py-16">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-xl text-center py-16">
+                  <h4 class="mb-2 text-base font-bold text-biru uppercase">education</h4>
+                  <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">My Education</h2>
+                  <p class="text-md text-base font-medium text-secondary md:text-lg">
+                    My educational background forms the foundation of my journey as a 3D artist and environment designer. It has equipped me with the skills and knowledge necessary to bring creative visions to life in the world of digital art.
+                  </p>
+                </div>
+
+
+                <div class="w-full px-4 pl-10">
+                    <ol class="relative border-l border-secondary dark:border-gray-700">                  
+                        <li class="mb-10 ml-6">            
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-biru rounded-full -left-3 ring-4 ring-bgbiru dark:ring-gray-900 dark:bg-blue-900">
+                                <svg class="w-2.5 h-2.5 text-primary dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                </svg>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-primary dark:text-white">Malang State University</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-biru dark:text-gray-500">2018-2022</time>
+                            <p class="mb-4 text-base font-normal text-secondary dark:text-gray-400">I majored in civil Engineering and Education Study. I got knowledge and experience about how to teach, and how to manage construction </p>
+                            
+                        </li>
+                        <li class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-biru rounded-full -left-3 ring-4 ring-bgbiru dark:ring-gray-900 dark:bg-blue-900">
+                                <svg class="w-2.5 h-2.5 text-primary dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                </svg>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-primary dark:text-white">State Vocational High School 3 Boyolangu Tulungagung</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-biru dark:text-gray-500">2015-2018</time>
+                            <p class="text-base font-normal text-secondary dark:text-gray-400">I majored in modeling design and building information at this school. I once won a student competency competition at district level</p>
+                        </li>
+                        <li class="ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-biru rounded-full -left-3 ring-4 ring-bgbiru dark:ring-gray-900 dark:bg-blue-900">
+                                <svg class="w-2.5 h-2.5 text-primary dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                </svg>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-primary dark:text-white">Junior High School 6 Tulungagung</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-biru dark:text-gray-500">2012-2015</time>
+                            <p class="text-base font-normal text-secondary dark:text-gray-400">I follow the Art Club, Band Club, and Young Indonesia Red Cross Society. We have won band competitions and Young Indonesia Red Cross Society at district level</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+<section class="bg-bgdark py-16">
+    <div class="container mx-auto">
+        <div class="w-full px-4">
+            <div class="mx-auto mb-16 max-w-xl text-center py-16">
+                <h4 class="mb-2 text-base font-bold text-biru uppercase">contact me</h4>
+                <p class="text-md text-base font-medium text-secondary md:text-lg">
+                  Feel free to contact me to work on colaboration project or just saying hi
+                </p>
+            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- sosmed -->
+            <div id="social" class="mb-20">
+                <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">My Social Media</h2>
+                <div class="grid grid-cols-6 gap-3">
+                    <!-- Tautan Email -->
+                    <div class="bg-gradient-to-tr from-mail1 to-mail2 rounded-lg p-3 justify-center">
+                        <a href="mailto:youremail@example.com" target="_blank" class="text-blue-500 hover:text-blue-600">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Mail.Ru</title><path fill="#ffffff" d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"/></svg>
+                        </a>
+                    </div>
+                    <!-- Tautan WhatsApp -->
+                    <div class="bg-gradient-to-tr from-wa1 to-wa2 rounded-lg p-3 justify-center">
+                        <a href="https://wa.me/yourphonenumber" target="_blank" class="text-green-500 hover:text-green-600">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                    <!-- Tautan Facebook -->
+                    <div class="bg-gradient-to-tr from-fb1 to-fb2 rounded-lg p-3 justify-center">
+                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-blue-500 hover:text-blue-600">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path fill="#ffffff" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                    <!-- Tautan Instagram -->
+                    <div class="bg-gradient-to-tr from-ig1 to-ig2 rounded-lg p-3 justify-center">
+                        <a href="https://www.instagram.com/yourprofile" target="_blank">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path fill="#ffffff" d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div class="bg-bgdark rounded-lg ">
+                    <!-- Tautan Twitter -->
+                    <div class="bg-gradient-to-tr from-tw1 to-tw2 rounded-lg p-3 justify-center">
+                        <a href="https://twitter.com/yourprofile" target="_blank">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path fill="#ffffff" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                    </div>
+                    <!-- Tautan Discord -->
+                    <div class="bg-gradient-to-tr from-dc1 to-dc2 rounded-lg p-3 justify-center">
+                
+                        <a href="https://discord.gg/yourserver" target="_blank">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path fill="#ffffff" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                </div>
+
+                <div id="contact">
+                    <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">Contact me</h2>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-biru font-medium">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-biru font-medium">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-biru font-medium">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Write Your Message" class="w-full border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="rounded-full bg-gradient-to-t from-aksen1 to-aksen2 py-2 px-5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg relative z-20">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- kontak me -->
+            <!-- Tambahkan formulir kontak Anda di sini -->
+
+            <!-- Social Media Links -->
+
+        </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-bgdark border-t border-secondary text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Made with ❤ by Maghdzany Fikri</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="dist/script.js"></script>
+</body>
+</html>
