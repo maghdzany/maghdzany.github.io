@@ -12,6 +12,7 @@ module.exports = {
         poppins: ['poppins', 'sans'],
       },
       colors: {
+        bgbase: '#1d2355',
         bgdark: '#0b0e2f',
         bgbiru: '#64428e',
         aksen1: '#44a1fe',

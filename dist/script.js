@@ -25,11 +25,11 @@ sidebarDimming.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         // Saat scroll down, munculkan navbar dengan efek fade dan scale
-        navbar.classList.remove('scale-y-0', 'opacity-0');
-        navbar.classList.add('scale-y-100', 'opacity-100');
+        navbar.classList.remove('opacity-0');
+        navbar.classList.add('opacity-100');
     } else {
         // Saat di paling atas, sembunyikan navbar kembali
-        navbar.classList.remove('scale-y-100', 'opacity-100');
-        navbar.classList.add('scale-y-0', 'opacity-0');
+        navbar.classList.remove('opacity-100');
+        navbar.classList.add('opacity-0');
     }
 });
